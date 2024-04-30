@@ -1,1 +1,25 @@
-<!-- HTML 코드를 작성해 주세요. -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <picture>
+      <source srcset="./image/netflix@1x.webp 1x, ./image/netflix@1x.webp 1x" />
+      <img src="images/netflix.png" alt="넷플릭스" />
+    </picture>
+    <picture>
+      <source
+        srcset="
+          ./images/small-550.jpg    550w,
+          ./images/medium-1024.jpg 1024w,
+          ./images/large-1600.jpg  1600w
+        "
+        size="(max-width: 800px) 50vw, 600px"
+      />
+      <img src="./images/image-src.png" alt="" />
+    </picture>
+    <picture srcset="" media=""></picture>
+  </body>
+</html>
