@@ -3,16 +3,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>인터렉티브 요소</title>
+    <script type="module">
+      const btn__open = document.getElementById("btn__open");
+      const btn__close = document.getElementById("btn__close");
+      const panalDialog = document.querySelector("dialog");
+      const onOpen = () => panalDialog.showModal();
+      const onClose = () => panalDialog.close();
+      btn__open.addEventListener("click", onOpen);
+      btn__close.addEventListener("click", onClose);
+    </script>
   </head>
   <body>
-    <dialog open aria-label="가입안내">
-      <h2 id="join__info">가입 안내</h2>
-      <p>차별화된 회원가입 혜택</p>
-      <a href="/">지금 바로 만나보세요!</a>
+    <dialog aria-labelledby="join__info">
+      <p id="join__info">차별화된 회원가입 혜택</p>
+      <a href="www.naver.com">지금 바로 만나보세요!</a>
       <form method="dialog">
         <button type="button">오늘 하루 안 보기</button>
-        <button type="button">닫기</button>
+        <button id="btn__close" type="button">닫기</button>
       </form>
     </dialog>
+    <button id="btn__open" type="button">다이얼로그 보기 / 감추기</button>
+
+    <!-- 상세 및 요약 정보 제공 예시 -->
+    <div>
+      <details open>
+        <summary>국민 내일배움카드</summary>
+        <figure>
+          <img src="images/learn-card.png" alt="" />
+        </figure>
+        <p>
+          급격한 기술 발전 및 노동시장 변화에 대응하는 사회안전망 차원에서 국민
+          스스로 직업능력개발훈련을 실시할 수 있도록 훈련비 등을 지원받을 수
+          있는 카드를 의미한다.
+        </p>
+      </details>
+    </div>
   </body>
 </html>
