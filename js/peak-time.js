@@ -3,6 +3,6 @@ const results = document.querySelectorAll('.voting-result');
 
 button.addEventListener("click", () => {
   results.forEach(result => {
-    result.removeAttribute('hidden');
+    result.toggleAttribute('hidden');
   });
 });
